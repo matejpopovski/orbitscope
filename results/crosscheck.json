@@ -1,0 +1,32 @@
+{
+  "command": "npx tsx scripts/report-accuracy.ts",
+  "reference": "satellite.js 7.1.0, same tsince for both implementations",
+  "snapshotObjects": 16847,
+  "offsetsMinutes": {
+    "0": {
+      "objects": 16847,
+      "worstKm": 0.0001117527766577991,
+      "meanKm": 1.554218429581262e-8
+    },
+    "1440": {
+      "objects": 16847,
+      "worstKm": 0.00012232418392975203,
+      "meanKm": 1.9767154456702312e-8
+    },
+    "4320": {
+      "objects": 16843,
+      "worstKm": 0.0001456796638460772,
+      "meanKm": 3.532913297407386e-8
+    },
+    "-1440": {
+      "objects": 16847,
+      "worstKm": 0.00010186881839481796,
+      "meanKm": 1.3447802249567793e-8
+    }
+  },
+  "syntheticResonantOrbits": {
+    "objects": 188,
+    "worstKm": 9.104909623141484e-10,
+    "meanKm": 1.0863474563156479e-10
+  }
+}

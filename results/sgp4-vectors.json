@@ -1,0 +1,350 @@
+{
+  "command": "npx tsx scripts/report-accuracy.ts",
+  "reference": "Vallado, Crawford, Hujsak, Kelso, \"Revisiting Spacetrack Report #3\", AIAA 2006-6753: SGP4-VER.TLE and tcppver.out",
+  "satellites": 33,
+  "comparedPoints": 666,
+  "deepSpaceSatellites": 24,
+  "maxPositionErrorKm": 1.1708084947102836e-7,
+  "maxVelocityErrorKmS": 8.528685513976665e-10,
+  "errorCodes": [
+    1,
+    1,
+    6,
+    6,
+    4,
+    3,
+    6
+  ],
+  "perSatellite": [
+    {
+      "satnum": 5,
+      "comment": "# TEME example",
+      "deepSpace": false,
+      "points": 13,
+      "maxPositionErrorKm": 6.819206706052019e-9,
+      "maxVelocityErrorKmS": 7.70480217497559e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 4632,
+      "comment": "## fig show lyddane fix error with gsfc ver",
+      "deepSpace": true,
+      "points": 5,
+      "maxPositionErrorKm": 5.971630012994096e-9,
+      "maxVelocityErrorKmS": 6.520349240499199e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 6251,
+      "comment": "# perigee = 377.26km, so moderate drag case",
+      "deepSpace": false,
+      "points": 25,
+      "maxPositionErrorKm": 7.266465865791276e-9,
+      "maxVelocityErrorKmS": 6.893817396127629e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 8195,
+      "comment": "MOLNIYA 2-14              # 12h resonant ecc in 0.65 to 0.7 range",
+      "deepSpace": true,
+      "points": 25,
+      "maxPositionErrorKm": 6.2742006645255545e-9,
+      "maxVelocityErrorKmS": 6.70085620775922e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 9880,
+      "comment": "MOLNIYA 1-36              ## fig 12h resonant ecc in 0.7 to 0.715 range",
+      "deepSpace": true,
+      "points": 25,
+      "maxPositionErrorKm": 7.026854713478568e-9,
+      "maxVelocityErrorKmS": 8.528685513976665e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 9998,
+      "comment": "SMS 1 AKM           # show the integrator problem with gsfc ver",
+      "deepSpace": true,
+      "points": 14,
+      "maxPositionErrorKm": 7.892990544801977e-9,
+      "maxVelocityErrorKmS": 7.539594004259457e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 11801,
+      "comment": "# Original STR#3 SDP4 test",
+      "deepSpace": true,
+      "points": 5,
+      "maxPositionErrorKm": 6.882432835728882e-9,
+      "maxVelocityErrorKmS": 5.387525827649614e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 14128,
+      "comment": "EUTELSAT 1-F1 (ECS1)## fig lyddane choice in GSFC at 2080 min",
+      "deepSpace": true,
+      "points": 25,
+      "maxPositionErrorKm": 6.959357197888607e-9,
+      "maxVelocityErrorKmS": 6.782373018671542e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 16925,
+      "comment": "# s4 > 20 mod",
+      "deepSpace": true,
+      "points": 13,
+      "maxPositionErrorKm": 8.09569741469056e-9,
+      "maxVelocityErrorKmS": 6.66114051404559e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 20413,
+      "comment": "SL-12 R/B           # Shows Lyddane choice at 1860 and 4700 min",
+      "deepSpace": true,
+      "points": 26,
+      "maxPositionErrorKm": 7.763900709302775e-9,
+      "maxVelocityErrorKmS": 7.353201006686177e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 21897,
+      "comment": "MOLNIYA 1-83                # 12h resonant, ecc > 0.715 (negative BSTAR)",
+      "deepSpace": true,
+      "points": 25,
+      "maxPositionErrorKm": 7.58618728136768e-9,
+      "maxVelocityErrorKmS": 6.628278190388462e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 22312,
+      "comment": "SL-6 R/B(2)         # last tle given, decayed 2006-04-04, day 94",
+      "deepSpace": false,
+      "points": 23,
+      "maxPositionErrorKm": 6.469873266902578e-9,
+      "maxVelocityErrorKmS": 6.752305782963106e-10,
+      "initError": 0,
+      "terminalError": 1
+    },
+    {
+      "satnum": 22674,
+      "comment": "SL-6 R/B(2)         # 12h resonant ecc in the > 0.715 range",
+      "deepSpace": true,
+      "points": 25,
+      "maxPositionErrorKm": 7.244236230862758e-9,
+      "maxVelocityErrorKmS": 7.649746003357162e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 23177,
+      "comment": "# no quadrant fix",
+      "deepSpace": true,
+      "points": 13,
+      "maxPositionErrorKm": 7.118343732320021e-9,
+      "maxVelocityErrorKmS": 7.496064622371893e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 23333,
+      "comment": "WIND                        # STR#3 Kepler failes past about 200 min",
+      "deepSpace": true,
+      "points": 15,
+      "maxPositionErrorKm": 7.06901502481523e-9,
+      "maxVelocityErrorKmS": 6.865470701198133e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 23599,
+      "comment": "ARIANE 42P+3 R/B    ## fig Lyddane bug at > 280.5 min for AcTan()",
+      "deepSpace": true,
+      "points": 37,
+      "maxPositionErrorKm": 7.678012839314649e-9,
+      "maxVelocityErrorKmS": 7.312604890042119e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 24208,
+      "comment": "ITALSAT 2           # 24h resonant GEO, inclination > 3 deg",
+      "deepSpace": true,
+      "points": 13,
+      "maxPositionErrorKm": 6.4871247406421005e-9,
+      "maxVelocityErrorKmS": 6.54992234212401e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 25954,
+      "comment": "## gsfc version from 240 to 1440 min",
+      "deepSpace": true,
+      "points": 26,
+      "maxPositionErrorKm": 7.548090843961288e-9,
+      "maxVelocityErrorKmS": 7.373485141004649e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 26900,
+      "comment": "# 270 deg Lyddane bug at 37606 min",
+      "deepSpace": true,
+      "points": 4,
+      "maxPositionErrorKm": 5.650235069076729e-9,
+      "maxVelocityErrorKmS": 4.5560857472166686e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 26975,
+      "comment": "COSMOS 1024 DEB     # 12h resonant ecc in 0.5 to 0.65 range",
+      "deepSpace": true,
+      "points": 25,
+      "maxPositionErrorKm": 7.624644193403026e-9,
+      "maxVelocityErrorKmS": 8.020892242539947e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 28057,
+      "comment": "# drop certain normal drag terms",
+      "deepSpace": false,
+      "points": 25,
+      "maxPositionErrorKm": 6.768475064647233e-9,
+      "maxVelocityErrorKmS": 6.893975142886418e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 28129,
+      "comment": "NAVSTAR 53 (USA 175)# 12h non-resonant GPS (ecc < 0.5 ecc)",
+      "deepSpace": true,
+      "points": 13,
+      "maxPositionErrorKm": 7.330376034693548e-9,
+      "maxVelocityErrorKmS": 6.581260872888353e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 28350,
+      "comment": "COSMOS 2405         # Near Earth, perigee = 127.20 (< 156) s4 mod",
+      "deepSpace": false,
+      "points": 13,
+      "maxPositionErrorKm": 6.3417336027430294e-9,
+      "maxVelocityErrorKmS": 6.85280289617279e-10,
+      "initError": 0,
+      "terminalError": 1
+    },
+    {
+      "satnum": 28623,
+      "comment": "H-2 R/B                   # Deep space, perigee = 135.75 (<156) s4 mod",
+      "deepSpace": true,
+      "points": 13,
+      "maxPositionErrorKm": 6.159446910209455e-9,
+      "maxVelocityErrorKmS": 6.284107677100809e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 28626,
+      "comment": "# negative around 1130 min",
+      "deepSpace": true,
+      "points": 13,
+      "maxPositionErrorKm": 7.004958743381598e-9,
+      "maxVelocityErrorKmS": 7.093296656051026e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 28872,
+      "comment": "#(perigee = -51km), lost in 50 minutes",
+      "deepSpace": false,
+      "points": 11,
+      "maxPositionErrorKm": 7.3135302567225524e-9,
+      "maxVelocityErrorKmS": 6.705853504399134e-10,
+      "initError": 0,
+      "terminalError": 6
+    },
+    {
+      "satnum": 29141,
+      "comment": "SL-14 DEB           # Last stage of decay - lost in under 420 min",
+      "deepSpace": false,
+      "points": 22,
+      "maxPositionErrorKm": 6.6729861492496555e-9,
+      "maxVelocityErrorKmS": 7.775851289712372e-10,
+      "initError": 0,
+      "terminalError": 6
+    },
+    {
+      "satnum": 29238,
+      "comment": "# simplified drag eq",
+      "deepSpace": false,
+      "points": 13,
+      "maxPositionErrorKm": 7.090778811912148e-9,
+      "maxVelocityErrorKmS": 7.702219874153531e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 88888,
+      "comment": "# Original STR#3 SGP4 test",
+      "deepSpace": false,
+      "points": 13,
+      "maxPositionErrorKm": 6.393689033861506e-9,
+      "maxVelocityErrorKmS": 7.083083577876004e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 33333,
+      "comment": "# check error code 4",
+      "deepSpace": true,
+      "points": 5,
+      "maxPositionErrorKm": 7.087980619934126e-9,
+      "maxVelocityErrorKmS": 6.641024075905449e-10,
+      "initError": 0,
+      "terminalError": 4
+    },
+    {
+      "satnum": 33334,
+      "comment": "# try and check error code 2 but this",
+      "deepSpace": true,
+      "points": 0,
+      "maxPositionErrorKm": 0,
+      "maxVelocityErrorKmS": 0,
+      "initError": 3,
+      "terminalError": 3
+    },
+    {
+      "satnum": 33335,
+      "comment": "# try to check error code 3 looks like ep never goes below zero, tied close to ecc",
+      "deepSpace": true,
+      "points": 73,
+      "maxPositionErrorKm": 8.121826864374134e-9,
+      "maxVelocityErrorKmS": 7.669059131918624e-10,
+      "initError": 0,
+      "terminalError": 0
+    },
+    {
+      "satnum": 20413,
+      "comment": "SL-12 R/B           # Shows Lyddane choice at 1860 and 4700 min",
+      "deepSpace": true,
+      "points": 70,
+      "maxPositionErrorKm": 1.1708084947102836e-7,
+      "maxVelocityErrorKmS": 7.618745175588683e-10,
+      "initError": 0,
+      "terminalError": 6
+    }
+  ]
+}

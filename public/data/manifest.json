@@ -1,0 +1,9 @@
+{
+  "file": "active-2026-11-02.json",
+  "fetchedAt": "2026-11-02T07:39:20.244Z",
+  "objects": 16847,
+  "bytes": 2279209,
+  "sha256": "3777e9d41c4518e51545e7be5f9f75e874be7d129ac53b8d4ded32b18161900b",
+  "source": "https://celestrak.org/NORAD/elements/gp.php?GROUP=active&FORMAT=json",
+  "attribution": "Orbital data: CelesTrak (celestrak.org), derived from general perturbations element sets published by the US Space Force 18th Space Defense Squadron via Space-Track.org. Basic SSA data redistributed under the USSPACECOM blanket approval, which is conditional on citation."
+}

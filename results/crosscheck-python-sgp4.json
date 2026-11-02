@@ -1,0 +1,12 @@
+{
+  "command": "npm run crosscheck:python",
+  "reference": "python-sgp4 2.27, compiled C++ extension: True",
+  "note": "Same tsince on both sides, four time offsets per object.",
+  "objects": 16847,
+  "comparedStates": 67384,
+  "disagreementsOnFailure": 0,
+  "worstPositionKm": 3.8796049734121104e-08,
+  "worstObject": "SES-12",
+  "meanPositionKm": 8.954668043955579e-11,
+  "worstVelocityKmS": 6.02726856224973e-12
+}

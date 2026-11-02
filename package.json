@@ -1,0 +1,43 @@
+{
+  "name": "orbitscope",
+  "version": "1.0.0",
+  "description": "WebGL globe tracking every active satellite with a hand-written SGP4 in the browser.",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "dev": "vite --port 42160 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 42161 --strictPort",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write .",
+    "snapshot": "node scripts/fetch-snapshot.mjs",
+    "e2e": "playwright test",
+    "report": "tsx scripts/report-accuracy.ts && tsx scripts/mutation-check.ts && tsx scripts/bench-propagation.ts --write",
+    "crosscheck:python": "tsx scripts/export-states.ts && uv run --no-project --python 3.12 --with sgp4==2.27 python scripts/crosscheck-python.py"
+  },
+  "dependencies": {
+    "three": "0.187.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.5",
+    "@playwright/test": "1.49.1",
+    "@types/node": "20.19.43",
+    "@types/three": "0.187.0",
+    "esbuild": "0.28.2",
+    "eslint": "9.39.5",
+    "globals": "16.5.0",
+    "prettier": "3.9.10",
+    "satellite.js": "7.1.0",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.72.1",
+    "vite": "7.3.7",
+    "vitest": "4.1.12"
+  }
+}

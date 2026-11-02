@@ -1,0 +1,775 @@
+{
+  "command": "npx tsx scripts/mutation-check.ts",
+  "note": "Literals scaled by 1.001 (0 becomes 1), and + - * / swapped. \"killed\" means the published vectors (1e-6 km, 1e-8 km/s) or expected error codes caught the change. \"killedByOracle\" counts survivors then caught by satellite.js over deep-space catalog objects and synthetic resonant orbits (1e-4 km, 1e-6 km/s).",
+  "mutants": 1760,
+  "killed": 1642,
+  "killRate": 0.9329545454545455,
+  "killedByOracle": 11,
+  "oracleStates": 5244,
+  "residual": 107,
+  "byFile": {
+    "src/sgp4/deepspace.ts": {
+      "mutants": 1134,
+      "killed": 1067
+    },
+    "src/sgp4/propagate.ts": {
+      "mutants": 270,
+      "killed": 239
+    },
+    "src/sgp4/init.ts": {
+      "mutants": 356,
+      "killed": 336
+    }
+  },
+  "residualMutants": [
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 179,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 180,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 181,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 182,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 183,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 184,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 185,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 186,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 187,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 188,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 189,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 190,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 191,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 192,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 193,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 194,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 195,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 196,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 197,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 198,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 199,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 200,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 201,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 202,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 203,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 204,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 205,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 206,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 207,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 208,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 209,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 210,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 211,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 212,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 213,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 214,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 215,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 216,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 220,
+      "kind": "literal",
+      "original": "2",
+      "replacement": "2.002"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 377,
+      "kind": "literal",
+      "original": "0.0052359877",
+      "replacement": "0.005241223687699999"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 377,
+      "kind": "literal",
+      "original": "0.0034906585",
+      "replacement": "0.0034941491584999994"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 378,
+      "kind": "literal",
+      "original": "8.26e-3",
+      "replacement": "0.00826826"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 378,
+      "kind": "literal",
+      "original": "9.24e-3",
+      "replacement": "0.009249239999999999"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 385,
+      "kind": "literal",
+      "original": "5.2359877e-2",
+      "replacement": "0.052412236876999994"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 385,
+      "kind": "literal",
+      "original": "5.2359877e-2",
+      "replacement": "0.052412236876999994"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 387,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 398,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 515,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 558,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 558,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 564,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 565,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 566,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 567,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 568,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 385,
+      "kind": "operator",
+      "original": "-",
+      "replacement": "+"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 558,
+      "kind": "operator",
+      "original": "*",
+      "replacement": "/"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 7,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 7,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 7,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 7,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 7,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 7,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 8,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 8,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 8,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 8,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 8,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 10,
+      "kind": "literal",
+      "original": "1.5e-12",
+      "replacement": "1.5014999999999998e-12"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 67,
+      "kind": "literal",
+      "original": "2",
+      "replacement": "2.002"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 73,
+      "kind": "literal",
+      "original": "1",
+      "replacement": "1.001"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 73,
+      "kind": "literal",
+      "original": "0.001",
+      "replacement": "0.001001"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 75,
+      "kind": "literal",
+      "original": "1e-6",
+      "replacement": "0.0000010009999999999998"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 105,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 110,
+      "kind": "literal",
+      "original": "1",
+      "replacement": "1.001"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 117,
+      "kind": "literal",
+      "original": "1",
+      "replacement": "1.001"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 130,
+      "kind": "literal",
+      "original": "9999.9",
+      "replacement": "10009.899899999999"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 131,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 132,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 133,
+      "kind": "literal",
+      "original": "1",
+      "replacement": "1.001"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 133,
+      "kind": "literal",
+      "original": "1e-12",
+      "replacement": "1.0009999999999999e-12"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 133,
+      "kind": "literal",
+      "original": "10",
+      "replacement": "10.009999999999998"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 133,
+      "kind": "literal",
+      "original": "1",
+      "replacement": "1.001"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 136,
+      "kind": "literal",
+      "original": "1",
+      "replacement": "1.001"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 138,
+      "kind": "literal",
+      "original": "0.95",
+      "replacement": "0.9509499999999999"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 138,
+      "kind": "literal",
+      "original": "0.95",
+      "replacement": "0.9509499999999999"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 138,
+      "kind": "literal",
+      "original": "0.95",
+      "replacement": "0.9509499999999999"
+    },
+    {
+      "file": "src/sgp4/init.ts",
+      "line": 7,
+      "kind": "literal",
+      "original": "6",
+      "replacement": "6.005999999999999"
+    },
+    {
+      "file": "src/sgp4/init.ts",
+      "line": 56,
+      "kind": "literal",
+      "original": "220",
+      "replacement": "220.21999999999997"
+    },
+    {
+      "file": "src/sgp4/init.ts",
+      "line": 56,
+      "kind": "literal",
+      "original": "1",
+      "replacement": "1.001"
+    },
+    {
+      "file": "src/sgp4/init.ts",
+      "line": 63,
+      "kind": "literal",
+      "original": "156",
+      "replacement": "156.15599999999998"
+    },
+    {
+      "file": "src/sgp4/init.ts",
+      "line": 65,
+      "kind": "literal",
+      "original": "98",
+      "replacement": "98.09799999999998"
+    },
+    {
+      "file": "src/sgp4/init.ts",
+      "line": 86,
+      "kind": "literal",
+      "original": "1e-4",
+      "replacement": "0.0001001"
+    },
+    {
+      "file": "src/sgp4/init.ts",
+      "line": 119,
+      "kind": "literal",
+      "original": "1e-4",
+      "replacement": "0.0001001"
+    },
+    {
+      "file": "src/sgp4/init.ts",
+      "line": 125,
+      "kind": "literal",
+      "original": "1",
+      "replacement": "1.001"
+    },
+    {
+      "file": "src/sgp4/init.ts",
+      "line": 125,
+      "kind": "literal",
+      "original": "1.5e-12",
+      "replacement": "1.5014999999999998e-12"
+    },
+    {
+      "file": "src/sgp4/init.ts",
+      "line": 125,
+      "kind": "literal",
+      "original": "1.5e-12",
+      "replacement": "1.5014999999999998e-12"
+    },
+    {
+      "file": "src/sgp4/init.ts",
+      "line": 133,
+      "kind": "literal",
+      "original": "225",
+      "replacement": "225.22499999999997"
+    },
+    {
+      "file": "src/sgp4/init.ts",
+      "line": 156,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/init.ts",
+      "line": 156,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/init.ts",
+      "line": 162,
+      "kind": "literal",
+      "original": "1440",
+      "replacement": "1441.4399999999998"
+    },
+    {
+      "file": "src/sgp4/init.ts",
+      "line": 125,
+      "kind": "operator",
+      "original": "+",
+      "replacement": "-"
+    },
+    {
+      "file": "src/sgp4/init.ts",
+      "line": 162,
+      "kind": "operator",
+      "original": "-",
+      "replacement": "+"
+    },
+    {
+      "file": "src/sgp4/init.ts",
+      "line": 162,
+      "kind": "operator",
+      "original": "+",
+      "replacement": "-"
+    },
+    {
+      "file": "src/sgp4/init.ts",
+      "line": 162,
+      "kind": "operator",
+      "original": "-",
+      "replacement": "+"
+    },
+    {
+      "file": "src/sgp4/init.ts",
+      "line": 162,
+      "kind": "operator",
+      "original": "*",
+      "replacement": "/"
+    },
+    {
+      "file": "src/sgp4/init.ts",
+      "line": 167,
+      "kind": "operator",
+      "original": "/",
+      "replacement": "*"
+    }
+  ]
+}
