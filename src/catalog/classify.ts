@@ -7,7 +7,7 @@ import type { CatalogEntry } from './snapshot';
  */
 export const CATEGORIES = [
   { id: 'starlink', label: 'Starlink' },
-  { id: 'megaconstellation', label: 'Other megaconstellations' },
+  { id: 'megaconstellation', label: 'Megaconstellations' },
   { id: 'gnss', label: 'Navigation' },
   { id: 'leo', label: 'Other LEO' },
   { id: 'meo', label: 'Other MEO' },

@@ -24,13 +24,6 @@
   "residualMutants": [
     {
       "file": "src/sgp4/deepspace.ts",
-      "line": 179,
-      "kind": "literal",
-      "original": "0",
-      "replacement": "1"
-    },
-    {
-      "file": "src/sgp4/deepspace.ts",
       "line": 180,
       "kind": "literal",
       "original": "0",
@@ -290,91 +283,91 @@
     },
     {
       "file": "src/sgp4/deepspace.ts",
-      "line": 220,
+      "line": 217,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 221,
       "kind": "literal",
       "original": "2",
       "replacement": "2.002"
     },
     {
       "file": "src/sgp4/deepspace.ts",
-      "line": 377,
+      "line": 378,
       "kind": "literal",
       "original": "0.0052359877",
       "replacement": "0.005241223687699999"
     },
     {
       "file": "src/sgp4/deepspace.ts",
-      "line": 377,
+      "line": 378,
       "kind": "literal",
       "original": "0.0034906585",
       "replacement": "0.0034941491584999994"
     },
     {
       "file": "src/sgp4/deepspace.ts",
-      "line": 378,
+      "line": 379,
       "kind": "literal",
       "original": "8.26e-3",
       "replacement": "0.00826826"
     },
     {
       "file": "src/sgp4/deepspace.ts",
-      "line": 378,
+      "line": 379,
       "kind": "literal",
       "original": "9.24e-3",
       "replacement": "0.009249239999999999"
     },
     {
       "file": "src/sgp4/deepspace.ts",
-      "line": 385,
+      "line": 386,
       "kind": "literal",
       "original": "5.2359877e-2",
       "replacement": "0.052412236876999994"
     },
     {
       "file": "src/sgp4/deepspace.ts",
-      "line": 385,
+      "line": 386,
       "kind": "literal",
       "original": "5.2359877e-2",
       "replacement": "0.052412236876999994"
     },
     {
       "file": "src/sgp4/deepspace.ts",
-      "line": 387,
+      "line": 388,
       "kind": "literal",
       "original": "0",
       "replacement": "1"
     },
     {
       "file": "src/sgp4/deepspace.ts",
-      "line": 398,
+      "line": 399,
       "kind": "literal",
       "original": "0",
       "replacement": "1"
     },
     {
       "file": "src/sgp4/deepspace.ts",
-      "line": 515,
+      "line": 516,
       "kind": "literal",
       "original": "0",
       "replacement": "1"
     },
     {
       "file": "src/sgp4/deepspace.ts",
-      "line": 558,
+      "line": 559,
       "kind": "literal",
       "original": "0",
       "replacement": "1"
     },
     {
       "file": "src/sgp4/deepspace.ts",
-      "line": 558,
-      "kind": "literal",
-      "original": "0",
-      "replacement": "1"
-    },
-    {
-      "file": "src/sgp4/deepspace.ts",
-      "line": 564,
+      "line": 559,
       "kind": "literal",
       "original": "0",
       "replacement": "1"
@@ -409,14 +402,21 @@
     },
     {
       "file": "src/sgp4/deepspace.ts",
-      "line": 385,
+      "line": 569,
+      "kind": "literal",
+      "original": "0",
+      "replacement": "1"
+    },
+    {
+      "file": "src/sgp4/deepspace.ts",
+      "line": 386,
       "kind": "operator",
       "original": "-",
       "replacement": "+"
     },
     {
       "file": "src/sgp4/deepspace.ts",
-      "line": 558,
+      "line": 559,
       "kind": "operator",
       "original": "*",
       "replacement": "/"
@@ -507,101 +507,73 @@
     },
     {
       "file": "src/sgp4/propagate.ts",
-      "line": 67,
+      "line": 70,
       "kind": "literal",
       "original": "2",
       "replacement": "2.002"
     },
     {
       "file": "src/sgp4/propagate.ts",
-      "line": 73,
+      "line": 76,
       "kind": "literal",
       "original": "1",
       "replacement": "1.001"
     },
     {
       "file": "src/sgp4/propagate.ts",
-      "line": 73,
+      "line": 76,
       "kind": "literal",
       "original": "0.001",
       "replacement": "0.001001"
     },
     {
       "file": "src/sgp4/propagate.ts",
-      "line": 75,
+      "line": 78,
       "kind": "literal",
       "original": "1e-6",
       "replacement": "0.0000010009999999999998"
     },
     {
       "file": "src/sgp4/propagate.ts",
-      "line": 105,
+      "line": 108,
       "kind": "literal",
       "original": "0",
       "replacement": "1"
     },
     {
       "file": "src/sgp4/propagate.ts",
-      "line": 110,
+      "line": 113,
       "kind": "literal",
       "original": "1",
       "replacement": "1.001"
     },
     {
       "file": "src/sgp4/propagate.ts",
-      "line": 117,
+      "line": 120,
       "kind": "literal",
       "original": "1",
       "replacement": "1.001"
     },
     {
       "file": "src/sgp4/propagate.ts",
-      "line": 130,
+      "line": 133,
       "kind": "literal",
       "original": "9999.9",
       "replacement": "10009.899899999999"
     },
     {
       "file": "src/sgp4/propagate.ts",
-      "line": 131,
+      "line": 134,
       "kind": "literal",
       "original": "0",
       "replacement": "1"
     },
     {
       "file": "src/sgp4/propagate.ts",
-      "line": 132,
+      "line": 135,
       "kind": "literal",
       "original": "0",
       "replacement": "1"
-    },
-    {
-      "file": "src/sgp4/propagate.ts",
-      "line": 133,
-      "kind": "literal",
-      "original": "1",
-      "replacement": "1.001"
-    },
-    {
-      "file": "src/sgp4/propagate.ts",
-      "line": 133,
-      "kind": "literal",
-      "original": "1e-12",
-      "replacement": "1.0009999999999999e-12"
-    },
-    {
-      "file": "src/sgp4/propagate.ts",
-      "line": 133,
-      "kind": "literal",
-      "original": "10",
-      "replacement": "10.009999999999998"
-    },
-    {
-      "file": "src/sgp4/propagate.ts",
-      "line": 133,
-      "kind": "literal",
-      "original": "1",
-      "replacement": "1.001"
     },
     {
       "file": "src/sgp4/propagate.ts",
@@ -612,21 +584,49 @@
     },
     {
       "file": "src/sgp4/propagate.ts",
-      "line": 138,
+      "line": 136,
+      "kind": "literal",
+      "original": "1e-12",
+      "replacement": "1.0009999999999999e-12"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 136,
+      "kind": "literal",
+      "original": "10",
+      "replacement": "10.009999999999998"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 136,
+      "kind": "literal",
+      "original": "1",
+      "replacement": "1.001"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 139,
+      "kind": "literal",
+      "original": "1",
+      "replacement": "1.001"
+    },
+    {
+      "file": "src/sgp4/propagate.ts",
+      "line": 141,
       "kind": "literal",
       "original": "0.95",
       "replacement": "0.9509499999999999"
     },
     {
       "file": "src/sgp4/propagate.ts",
-      "line": 138,
+      "line": 141,
       "kind": "literal",
       "original": "0.95",
       "replacement": "0.9509499999999999"
     },
     {
       "file": "src/sgp4/propagate.ts",
-      "line": 138,
+      "line": 141,
       "kind": "literal",
       "original": "0.95",
       "replacement": "0.9509499999999999"
@@ -640,133 +640,133 @@
     },
     {
       "file": "src/sgp4/init.ts",
-      "line": 56,
+      "line": 61,
       "kind": "literal",
       "original": "220",
       "replacement": "220.21999999999997"
     },
     {
       "file": "src/sgp4/init.ts",
-      "line": 56,
+      "line": 61,
       "kind": "literal",
       "original": "1",
       "replacement": "1.001"
     },
     {
       "file": "src/sgp4/init.ts",
-      "line": 63,
+      "line": 68,
       "kind": "literal",
       "original": "156",
       "replacement": "156.15599999999998"
     },
     {
       "file": "src/sgp4/init.ts",
-      "line": 65,
+      "line": 70,
       "kind": "literal",
       "original": "98",
       "replacement": "98.09799999999998"
     },
     {
       "file": "src/sgp4/init.ts",
-      "line": 86,
+      "line": 91,
       "kind": "literal",
       "original": "1e-4",
       "replacement": "0.0001001"
     },
     {
       "file": "src/sgp4/init.ts",
-      "line": 119,
+      "line": 124,
       "kind": "literal",
       "original": "1e-4",
       "replacement": "0.0001001"
     },
     {
       "file": "src/sgp4/init.ts",
-      "line": 125,
+      "line": 130,
       "kind": "literal",
       "original": "1",
       "replacement": "1.001"
     },
     {
       "file": "src/sgp4/init.ts",
-      "line": 125,
+      "line": 130,
       "kind": "literal",
       "original": "1.5e-12",
       "replacement": "1.5014999999999998e-12"
     },
     {
       "file": "src/sgp4/init.ts",
-      "line": 125,
+      "line": 130,
       "kind": "literal",
       "original": "1.5e-12",
       "replacement": "1.5014999999999998e-12"
     },
     {
       "file": "src/sgp4/init.ts",
-      "line": 133,
+      "line": 138,
       "kind": "literal",
       "original": "225",
       "replacement": "225.22499999999997"
     },
     {
       "file": "src/sgp4/init.ts",
-      "line": 156,
+      "line": 161,
       "kind": "literal",
       "original": "0",
       "replacement": "1"
     },
     {
       "file": "src/sgp4/init.ts",
-      "line": 156,
+      "line": 161,
       "kind": "literal",
       "original": "0",
       "replacement": "1"
     },
     {
       "file": "src/sgp4/init.ts",
-      "line": 162,
+      "line": 167,
       "kind": "literal",
       "original": "1440",
       "replacement": "1441.4399999999998"
     },
     {
       "file": "src/sgp4/init.ts",
-      "line": 125,
+      "line": 130,
       "kind": "operator",
       "original": "+",
       "replacement": "-"
     },
     {
       "file": "src/sgp4/init.ts",
-      "line": 162,
+      "line": 167,
       "kind": "operator",
       "original": "-",
       "replacement": "+"
     },
     {
       "file": "src/sgp4/init.ts",
-      "line": 162,
+      "line": 167,
       "kind": "operator",
       "original": "+",
       "replacement": "-"
     },
     {
       "file": "src/sgp4/init.ts",
-      "line": 162,
+      "line": 167,
       "kind": "operator",
       "original": "-",
       "replacement": "+"
     },
     {
       "file": "src/sgp4/init.ts",
-      "line": 162,
+      "line": 167,
       "kind": "operator",
       "original": "*",
       "replacement": "/"
     },
     {
       "file": "src/sgp4/init.ts",
-      "line": 167,
+      "line": 172,
       "kind": "operator",
       "original": "/",
       "replacement": "*"

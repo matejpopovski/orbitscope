@@ -1,3 +1,4 @@
+import * as satellite from 'satellite.js';
 import { describe, expect, it } from 'vitest';
 import { geodeticToEcef, lookAngles, temeToEcef } from '../src/astro/frames';
 import { gstime, jdFromUnixMs } from '../src/astro/time';
@@ -83,6 +84,41 @@ describe('pass prediction against a one-second brute-force scan', () => {
         peak = Math.max(peak, elevation(sat, t));
       }
       expect(pass.maxElevationDeg).toBeGreaterThan(peak - 0.001);
+    }
+  });
+});
+
+describe('naked-eye visibility', () => {
+  // satellite.js supplies the sun here so this does not check our series with itself.
+  const sunElevation = (ms: number): number => {
+    const jd = ms / 86_400_000 + 2440587.5;
+    const { rsun } = satellite.sunPos(jd);
+    const gmst = gstime(jd);
+    const look = lookAngles(observer, site, temeToEcef([rsun.x, rsun.y, rsun.z], gmst));
+    return look.elevationDeg;
+  };
+  const sat = byName(/^ISS \(ZARYA\)/);
+  const passes = [0, 1, 2, 3, 4, 5].flatMap((week) =>
+    predictPasses(sat, observer, SNAPSHOT_TIME_MS + week * 7 * 86_400_000, {
+      horizonHours: 168,
+      maxPasses: 60,
+    }),
+  );
+
+  it('finds some visible and some invisible passes over six weeks', () => {
+    expect(passes.some((pass) => pass.visible)).toBe(true);
+    expect(passes.some((pass) => !pass.visible)).toBe(true);
+  });
+
+  it('never marks a pass visible unless the observer is in darkness', () => {
+    for (const pass of passes.filter((p) => p.visible)) {
+      expect(sunElevation(pass.tcaMs)).toBeLessThan(-5.9);
+    }
+  });
+
+  it('marks a pass invisible in full daylight', () => {
+    for (const pass of passes.filter((p) => sunElevation(p.tcaMs) > 0)) {
+      expect(pass.visible).toBe(false);
     }
   });
 });

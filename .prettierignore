@@ -6,3 +6,4 @@ tests/fixtures/
 results/
 test-results/
 playwright-report/
+docs/

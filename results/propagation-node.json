@@ -2,19 +2,19 @@
   "command": "npx tsx scripts/bench-propagation.ts --write",
   "machine": "Apple M3 Max under Node v20.20.2, single thread, machine shared with other jobs",
   "objects": 16847,
-  "initMs": 124.23720800000001,
+  "initMs": 61.001709000000005,
   "nearEarth": {
     "objects": 16045,
-    "microsecondsPerCall": 0.6247818635088822,
-    "msPerSweep": 10.024625000000015
+    "microsecondsPerCall": 0.5451153007167379,
+    "msPerSweep": 8.746375000000057
   },
   "deepSpace": {
     "objects": 802,
-    "microsecondsPerCall": 0.6327406483791052,
-    "msPerSweep": 0.5074580000000424
+    "microsecondsPerCall": 0.5820336658351997,
+    "msPerSweep": 0.4667909999998301
   },
   "wholeCatalog": {
-    "microsecondsPerCall": 0.5785203893868374,
-    "msPerSweep": 9.74633300000005
+    "microsecondsPerCall": 0.5756737104528962,
+    "msPerSweep": 9.698374999999942
   }
 }

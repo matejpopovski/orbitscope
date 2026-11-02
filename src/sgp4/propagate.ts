@@ -10,6 +10,9 @@ const periodic: PeriodicState = { ep: 0, inclp: 0, nodep: 0, argpp: 0, mp: 0 };
 const TEMP4 = 1.5e-12;
 
 /**
+ * SGP4 as given by Vallado et al., AIAA 2006-6753, and its reference code:
+ * https://celestrak.org/publications/AIAA/2006-6753/
+ *
  * Propagates a satellite `tsince` minutes from its epoch and writes position
  * (km) and velocity (km/s), both in TEME, to `out[offset..offset + 5]`.
  *

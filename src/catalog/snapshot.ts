@@ -66,3 +66,21 @@ export function decodeSnapshot(snapshot: Snapshot): CatalogEntry[] {
     BSTAR: row[bstar] as number,
   }));
 }
+
+/** Fetches the catalog the site ships. Nothing here ever contacts CelesTrak. */
+export async function loadCatalog(baseUrl: string): Promise<{
+  manifest: SnapshotManifest;
+  entries: CatalogEntry[];
+}> {
+  const manifestResponse = await fetch(`${baseUrl}data/manifest.json`);
+  if (!manifestResponse.ok) {
+    throw new Error(`Catalog manifest returned HTTP ${manifestResponse.status}`);
+  }
+  const manifest = (await manifestResponse.json()) as SnapshotManifest;
+  const snapshotResponse = await fetch(`${baseUrl}data/${manifest.file}`);
+  if (!snapshotResponse.ok) {
+    throw new Error(`Catalog snapshot returned HTTP ${snapshotResponse.status}`);
+  }
+  const snapshot = (await snapshotResponse.json()) as Snapshot;
+  return { manifest, entries: decodeSnapshot(snapshot) };
+}

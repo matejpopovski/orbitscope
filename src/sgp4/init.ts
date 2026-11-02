@@ -7,10 +7,15 @@ import { Satrec, type MeanElements } from './satrec';
 const scratch = new Float64Array(6);
 
 /**
- * Builds a propagator from mean elements. Mirrors `sgp4init` from Vallado et
- * al., "Revisiting Spacetrack Report #3" (AIAA 2006-6753), in its improved
- * operation mode. The AFSPC mode is not implemented because the published
- * vectors do not exercise it, and untestable branches have no place here.
+ * Builds a propagator from mean elements.
+ *
+ * This follows `sgp4init` from D. A. Vallado, P. Crawford, R. Hujsak and T. S.
+ * Kelso, "Revisiting Spacetrack Report #3", AIAA 2006-6753, and the reference
+ * code published with it: https://celestrak.org/publications/AIAA/2006-6753/
+ *
+ * Only the improved operation mode is implemented. The published vectors do not
+ * exercise AFSPC mode, and results/crosscheck.json measures what that costs on
+ * the live catalog.
  */
 export function sgp4init(elements: MeanElements): Satrec {
   const sat = new Satrec();

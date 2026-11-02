@@ -2,12 +2,19 @@
   "command": "npx tsx scripts/report-accuracy.ts",
   "note": "Worst error per object between SGP4 and the cubic Hermite keyframe interpolant, over 12 start phases and 7 interior points of each interval.",
   "objects": 16847,
+  "velocityConsistency": {
+    "medianKmS": 0.000011143331637483791,
+    "p99KmS": 0.00006213536436898124,
+    "worstKmS": 0.006599250891129217,
+    "worstObject": "MMS 2"
+  },
   "results": [
     {
       "intervalSeconds": 1,
       "medianKm": 0.0000017612892994373676,
       "p99Km": 0.000009644144357020842,
       "worstKm": 0.0006186801776004335,
+      "linearMedianKm": 0.0010600540936746418,
       "worstByCategory": {
         "leo": 0.00007382964855326068,
         "meo": 0.00011991019230316406,
@@ -23,6 +30,7 @@
       "medianKm": 0.000008808014146186561,
       "p99Km": 0.0000482386491409239,
       "worstKm": 0.0030934092326532106,
+      "linearMedianKm": 0.026501360396469387,
       "worstByCategory": {
         "leo": 0.00036918975282207293,
         "meo": 0.0005998235067604839,
@@ -38,6 +46,7 @@
       "medianKm": 0.000026478310153838714,
       "p99Km": 0.00014470723032286752,
       "worstKm": 0.009280307048435642,
+      "linearMedianKm": 0.2385108161651163,
       "worstByCategory": {
         "leo": 0.0011088187687883495,
         "meo": 0.001801650848464928,
@@ -53,6 +62,7 @@
       "medianKm": 0.000055504392401297046,
       "p99Km": 0.0002926593874632849,
       "worstKm": 0.01856108487580092,
+      "linearMedianKm": 0.9540253320272135,
       "worstByCategory": {
         "leo": 0.0022328535586256986,
         "meo": 0.0036094630017569035,
@@ -68,6 +78,7 @@
       "medianKm": 0.0003594109374015481,
       "p99Km": 0.0006653291765976809,
       "worstKm": 0.037126619586924425,
+      "linearMedianKm": 3.8158306896928353,
       "worstByCategory": {
         "leo": 0.004696457341241227,
         "meo": 0.007237621482316746,
@@ -83,6 +94,7 @@
       "medianKm": 0.005727997866257485,
       "p99Km": 0.006506684236494142,
       "worstKm": 0.07430307590428749,
+      "linearMedianKm": 15.259010203983165,
       "worstByCategory": {
         "leo": 0.012997805945651697,
         "meo": 0.01650914754165725,
@@ -98,6 +110,7 @@
       "medianKm": 0.0915155664806365,
       "p99Km": 0.10292514419875531,
       "worstKm": 0.22195182282902506,
+      "linearMedianKm": 60.96803461461497,
       "worstByCategory": {
         "leo": 0.1302419598499088,
         "meo": 0.16611978179670725,
@@ -113,6 +126,7 @@
       "medianKm": 3.550597196352347,
       "p99Km": 3.9819627188547266,
       "worstKm": 6.392243888581417,
+      "linearMedianKm": 378.0824091894,
       "worstByCategory": {
         "leo": 4.721157289006583,
         "meo": 5.968579789765309,

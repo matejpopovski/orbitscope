@@ -2,8 +2,10 @@ import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { compactCatalog, FIELDS, MAX_SNAPSHOT_BYTES } from '../scripts/fetch-snapshot.mjs';
 import { apsides, CATEGORIES, classify } from '../src/catalog/classify';
+import { scaleCatalog } from '../src/catalog/scale';
 import { decodeSnapshot, type CatalogEntry, type Snapshot } from '../src/catalog/snapshot';
 import { ommToElements, sgp4init } from '../src/sgp4';
+import { searchCatalog } from '../src/ui/catalog-panel';
 
 const manifest = JSON.parse(readFileSync('public/data/manifest.json', 'utf8')) as {
   file: string;
@@ -106,5 +108,51 @@ describe('classification', () => {
     ['O3B MPOWER', 5.0, 0.0001, 'meo'],
   ])('files %s', (name, motion, ecc, expected) => {
     expect(id(entry(name, motion, ecc))).toBe(expected);
+  });
+});
+
+describe('load-test scaling', () => {
+  const entries = decodeSnapshot(snapshot).slice(0, 10);
+
+  it('leaves the real catalog alone at a factor of one', () => {
+    expect(scaleCatalog(entries, 1)).toBe(entries);
+  });
+
+  it('keeps the original objects unchanged at the start', () => {
+    const scaled = scaleCatalog(entries, 3);
+    expect(scaled).toHaveLength(30);
+    expect(scaled.slice(0, 10)).toEqual(entries);
+  });
+
+  it('spreads copies along the orbit', () => {
+    const scaled = scaleCatalog(entries, 4);
+    const first = entries[0] as CatalogEntry;
+    const copy = scaled[10] as CatalogEntry;
+    expect(copy.NORAD_CAT_ID).toBe(first.NORAD_CAT_ID);
+    expect(copy.MEAN_ANOMALY).toBeCloseTo((first.MEAN_ANOMALY + 90) % 360, 9);
+    expect(copy.MEAN_MOTION).toBe(first.MEAN_MOTION);
+  });
+});
+
+describe('searching the catalog', () => {
+  const entries = decodeSnapshot(snapshot);
+
+  it('finds an object by name, ignoring case', () => {
+    const [hit] = searchCatalog(entries, 'iss (zar');
+    expect(entries[hit as number]?.NORAD_CAT_ID).toBe(25544);
+  });
+
+  it('finds an object by exact catalog number', () => {
+    const [hit] = searchCatalog(entries, '25544');
+    expect(entries[hit as number]?.OBJECT_NAME).toMatch(/^ISS/);
+  });
+
+  it('finds an object by international designator', () => {
+    const [hit] = searchCatalog(entries, '1998-067A');
+    expect(entries[hit as number]?.NORAD_CAT_ID).toBe(25544);
+  });
+
+  it('returns nothing for an empty query', () => {
+    expect(searchCatalog(entries, '   ')).toEqual([]);
   });
 });

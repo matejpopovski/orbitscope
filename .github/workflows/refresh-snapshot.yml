@@ -1,0 +1,72 @@
+name: Refresh satellite snapshot
+
+on:
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: snapshot
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      changed: ${{ steps.publish.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Seeding from the last refresh arms the script's own age check, so a
+      # manual run within 20 hours of the schedule does not hit CelesTrak.
+      - name: Restore the previous snapshot
+        run: |
+          if git ls-remote --exit-code --heads origin snapshot > /dev/null; then
+            git fetch --depth=1 origin snapshot
+            rm -f public/data/*
+            git archive FETCH_HEAD | tar -x -C public/data
+          fi
+          sha256sum public/data/manifest.json > "$RUNNER_TEMP/before"
+
+      # One attempt. A non-200 fails the job for a human to read, and the site
+      # keeps serving the previous snapshot. Retrying is what CelesTrak's usage
+      # policy asks clients not to do.
+      - run: node scripts/fetch-snapshot.mjs
+
+      # A single force-pushed commit on an orphan branch. Committing a roughly
+      # 2 MB file to main every day would outgrow the repository within months.
+      - name: Publish to the snapshot branch
+        id: publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if sha256sum --check --status "$RUNNER_TEMP/before"; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          cd public/data
+          git init --quiet --initial-branch=snapshot
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .
+          git commit --quiet --message "Snapshot $(date --utc +%Y-%m-%d)"
+          git push --force --quiet \
+            "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" snapshot
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    needs: refresh
+    if: needs.refresh.outputs.changed == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/deploy.yml

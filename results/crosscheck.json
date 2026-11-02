@@ -28,5 +28,17 @@
     "objects": 188,
     "worstKm": 9.104909623141484e-10,
     "meanKm": 1.0863474563156479e-10
+  },
+  "improvedVersusAfspcMode": {
+    "atSnapshot": {
+      "worstKm": 0.00830432949399284,
+      "meanKm": 4.929502070771632e-7,
+      "over1Km": 0
+    },
+    "threeDaysAhead": {
+      "worstKm": 0.009821205516545929,
+      "meanKm": 7.432475266375047e-7,
+      "over1Km": 0
+    }
   }
 }

@@ -1,7 +1,8 @@
 import { PI, TWOPI, X2O3, XKE } from './constants';
 import type { Satrec } from './satrec';
 
-// Lunar and solar perturbation terms (SDP4) for periods of 225 minutes or more.
+// Lunar and solar perturbation terms (SDP4) for periods of 225 minutes or more,
+// from Vallado et al., AIAA 2006-6753: https://celestrak.org/publications/AIAA/2006-6753/
 // Numeric literals come from the published theory; several carry fewer digits
 // than a double can hold, and tidying them would break agreement with it.
 

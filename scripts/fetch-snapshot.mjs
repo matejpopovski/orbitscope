@@ -9,10 +9,10 @@
 // retry loop here: one attempt, then exit non-zero for a human to read.
 //
 //   node scripts/fetch-snapshot.mjs [--out public/data] [--force] [--raw file]
-//                                   [--from-raw file]
+//                                   [--from-raw file] [--url url]
 //
 // --raw keeps the unmodified response, --from-raw rebuilds from that file
-// without touching the network.
+// without touching the network, and --url points at a stand-in server.
 
 import { createHash } from 'node:crypto';
 import { mkdir, readdir, readFile, rm, stat, writeFile } from 'node:fs/promises';
@@ -99,8 +99,8 @@ async function readManifest(outDir) {
   }
 }
 
-async function download() {
-  const response = await fetch(SOURCE_URL, {
+async function download(url) {
+  const response = await fetch(url, {
     headers: { 'User-Agent': USER_AGENT, Accept: 'application/json' },
     redirect: 'manual',
   });
@@ -143,13 +143,14 @@ async function writeSnapshot(outDir, snapshot) {
 }
 
 function parseArgs(argv) {
-  const args = { out: 'public/data', force: false, raw: null, fromRaw: null };
+  const args = { out: 'public/data', force: false, raw: null, fromRaw: null, url: SOURCE_URL };
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
     if (arg === '--force') args.force = true;
     else if (arg === '--out') args.out = argv[(i += 1)];
     else if (arg === '--raw') args.raw = argv[(i += 1)];
     else if (arg === '--from-raw') args.fromRaw = argv[(i += 1)];
+    else if (arg === '--url') args.url = argv[(i += 1)];
     else throw new Error(`unknown argument ${arg}`);
   }
   return args;
@@ -171,7 +172,7 @@ async function main() {
         return;
       }
     }
-    body = await download();
+    body = await download(args.url);
     fetchedAt = new Date().toISOString();
     if (args.raw) {
       await mkdir(dirname(args.raw), { recursive: true });

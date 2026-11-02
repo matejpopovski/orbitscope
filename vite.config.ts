@@ -6,6 +6,8 @@ export default defineConfig({
   build: {
     target: 'es2022',
     sourcemap: true,
+    // three.js alone is most of this, and all of it is needed on first paint.
+    chunkSizeWarningLimit: 700,
   },
   worker: {
     format: 'es',
